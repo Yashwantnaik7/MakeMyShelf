@@ -1,6 +1,6 @@
 import {Image, StyleSheet, Text} from 'react-native';
-import Colors from '../../constants/Colors.constant';
-import Images from '../../constants/Images.constant';
+import Colors from '../../../constants/Colors.constant';
+import Images from '../../../constants/Images.constant';
 
 const homeTabBar = {
   tabBarLabel: ({focused}: {focused: boolean}) => (
