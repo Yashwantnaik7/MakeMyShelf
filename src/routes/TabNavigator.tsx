@@ -1,38 +1,51 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import Colors from '../constants/Colors.constant';
 import Chart from '../modules/chart/Chart';
-import Guide from '../modules/guide/Guide';
 import Home from '../modules/home/Home';
 import Wallet from '../modules/wallet/Wallet';
+import GuideNavigator from './stack/GuideNavigator';
 import {
   chartTabBar,
   guideTabBar,
   homeTabBar,
   walletTabBar,
-} from './tabItems/TabItems';
-import Colors from '../constants/Colors.constant';
+} from './tab/items/TabItems';
 
 const TabNavigator = (props: any): JSX.Element => {
-  const Tab = createBottomTabNavigator();
+  const TopTab = createMaterialTopTabNavigator();
+  const BottomTab = createBottomTabNavigator();
 
   return (
     <>
-      {/* <SafeAreaView style={{flex: 0, backgroundColor: 'black'}} /> */}
       <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
-        <StatusBar  barStyle="dark-content" />
-        <Tab.Navigator
+        <StatusBar barStyle="dark-content" />
+        <BottomTab.Navigator
           screenOptions={() => ({
             headerShown: false,
             tabBarStyle: styles.tabBarStyle,
             tabBarItemStyle: styles.tabBarItemStyle,
             tabBarLabelPosition: 'below-icon',
           })}>
-          <Tab.Screen name="Home" component={Home} options={homeTabBar} />
-          <Tab.Screen name="Wallet" component={Wallet} options={walletTabBar} />
-          <Tab.Screen name="Guide" component={Guide} options={guideTabBar} />
-          <Tab.Screen name="Chart" component={Chart} options={chartTabBar} />
-        </Tab.Navigator>
+          <BottomTab.Screen name="Home" component={Home} options={homeTabBar} />
+          <BottomTab.Screen
+            name="Wallet"
+            component={Wallet}
+            options={walletTabBar}
+          />
+          <TopTab.Screen
+            name="GuideStack"
+            component={GuideNavigator}
+            options={guideTabBar}
+          />
+          <BottomTab.Screen
+            name="Chart"
+            component={Chart}
+            options={chartTabBar}
+          />
+        </BottomTab.Navigator>
       </SafeAreaView>
     </>
   );
