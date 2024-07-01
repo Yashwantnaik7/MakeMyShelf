@@ -2,17 +2,17 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import Colors from '../constants/Colors.constant';
-import Chart from '../modules/chart/Chart';
-import Home from '../modules/home/Home';
-import Wallet from '../modules/wallet/Wallet';
-import GuideNavigator from './stack/GuideNavigator';
+import Colors from '../../constants/Colors.constant';
+import Chart from '../../modules/chart/Chart';
+import Home from '../../modules/home/Home';
+import Wallet from '../../modules/wallet/Wallet';
+import GuideNavigator from '../stack/GuideNavigator';
 import {
   chartTabBar,
   guideTabBar,
   homeTabBar,
   walletTabBar,
-} from './tab/items/TabItems';
+} from './items/TabItems';
 
 const TabNavigator = (props: any): JSX.Element => {
   const TopTab = createMaterialTopTabNavigator();

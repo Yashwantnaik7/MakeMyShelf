@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import TabNavigator from './src/routes/TabNavigator';
+import TabNavigator from './src/routes/tab/TabNavigator';
 
 function App(): React.JSX.Element {
   return (
