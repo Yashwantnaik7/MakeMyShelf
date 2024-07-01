@@ -12,7 +12,7 @@ import {
   guideTabBar,
   homeTabBar,
   walletTabBar,
-} from './items/TabItems';
+} from './items/bottom/BottomTabElement';
 
 const TabNavigator = (props: any): JSX.Element => {
   const TopTab = createMaterialTopTabNavigator();
