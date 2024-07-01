@@ -84,7 +84,7 @@ const TimelineComponent = ({route}: {route: any}) => {
         lineColor: getCurrentColors(item).lineColor,
       }))}
       renderDetail={renderDetail}
-      circleSize={25}
+      circleSize={26}
       lineWidth={2}
       timeContainerStyle={{minWidth: 52, marginTop: -4}}
       timeStyle={{textAlign: 'center', color: 'black', padding: 5}}
@@ -109,11 +109,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '600',
   },
   imageContainer: {
-    width: 45,
-    height: 45,
+    width: 40,
+    height: 40,
     borderRadius: 30,
     backgroundColor: 'white',
     justifyContent: 'center',

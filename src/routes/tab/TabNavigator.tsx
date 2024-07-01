@@ -56,13 +56,13 @@ export default TabNavigator;
 export const styles = StyleSheet.create({
   tabBarStyle: {
     backgroundColor: Colors.white,
-    height: 70,
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
+    height: 100,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
     position: 'absolute',
   },
   tabBarItemStyle: {
-    paddingVertical: 10,
+    paddingVertical: 21,
     marginHorizontal: 4,
   },
 });
