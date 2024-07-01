@@ -9,9 +9,8 @@ const Guide = ({navigation}: {navigation: any}) => {
   }
 
   return (
-    <View>
-      <DefaultOverlay text={"Guide"} />
-      <Button title="start journey" onPress={navigateToItinerary}/>
+    <View style={{flex: 1, justifyContent: 'center'}}>
+      <Button title="my journey" onPress={navigateToItinerary}/>
     </View>
   );
 };

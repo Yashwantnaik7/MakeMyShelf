@@ -1,14 +1,16 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Wallet from '../../../modules/wallet/Wallet';
-import Guide from '../../../modules/guide/Guide';
+import TimelineComponent from '../../../common/components/TimelineComponent';
+import { todayTimelines, tomorrowTimelines, yesterdayTimelines } from '../../../mock/Timeline.mock';
 
 const TopTab = createMaterialTopTabNavigator();
 
 const TopTabView = () => {
   return (
     <TopTab.Navigator>
-      <TopTab.Screen name="Home" component={Guide} />
-      <TopTab.Screen name="Settings" component={Wallet} />
+      <TopTab.Screen name="Yesterday" component={TimelineComponent} initialParams={{timelines: yesterdayTimelines}}/>
+      <TopTab.Screen name="Today" component={TimelineComponent} initialParams={{timelines:todayTimelines}}/>
+      <TopTab.Screen name="Tomorrow" component={TimelineComponent} initialParams={{timelines:tomorrowTimelines}}/>
     </TopTab.Navigator>
   );
 }

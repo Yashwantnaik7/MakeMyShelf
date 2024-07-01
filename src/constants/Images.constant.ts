@@ -8,6 +8,14 @@ const Images = {
         unSelectedGuide: require('../assets/images/guide_unselected.png'),
         selectedChart: require('../assets/images/chart_selected.png'),
         unSelectedChart: require('../assets/images/chart_unselected.png'),
+    },
+    timeline: {
+        location: require('../assets/images/location_icon.png'),
+        moon_cloud: require('../assets/images/moon_cloud.png'),
+        light_cloud: require('../assets/images/lightning_cloud.png'),
+        moon_wind: require('../assets/images/moon_wind.png'),
+        rain_cloud: require('../assets/images/rain_cloud.png'),
+
     }
 }
 
