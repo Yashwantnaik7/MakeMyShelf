@@ -1,19 +1,18 @@
+import { Image, ImageProps, StyleSheet, Text, View } from 'react-native';
 import Timeline from 'react-native-timeline-flatlist';
-import {Image, ImageProps, StyleSheet, Text, View} from 'react-native';
 import Colors from '../../constants/Colors.constant';
-import Images from '../../constants/Images.constant';
 
 export interface TimelineInterface {
-  day: string,
-  time: string,
-  title: string,
-  description: string,
-  icon: Element,
-  imageUrl: ImageProps,
+  day: string;
+  time: string;
+  title: string;
+  description: string;
+  icon: Element;
+  imageUrl: ImageProps;
 }
 
-const TimelineComponent = ({ route } : {route: any}) => {
-  const { timelines } = route.params;
+const TimelineComponent = ({route}: {route: any}) => {
+  const {timelines} = route.params;
 
   const getCurrentTime24HourFormat = () => {
     const now = new Date();
@@ -24,7 +23,8 @@ const TimelineComponent = ({ route } : {route: any}) => {
 
   const getCurrentColors = (item: TimelineInterface) => {
     switch (item.day) {
-        case 'today' :  const currentTime = getCurrentTime24HourFormat();
+      case 'today':
+        const currentTime = getCurrentTime24HourFormat();
         if (item.time <= currentTime) {
           return {
             circleColor: Colors.blue,
@@ -37,19 +37,24 @@ const TimelineComponent = ({ route } : {route: any}) => {
           };
         }
 
-        case 'yesterday' : return {
-            circleColor: Colors.blue,
-            lineColor: Colors.blue,
-          }
-        case 'tomorrow' : return {
+      case 'yesterday':
+        return {
+          circleColor: Colors.blue,
+          lineColor: Colors.blue,
+        };
+      case 'tomorrow':
+        return {
           circleColor: Colors.timline,
           lineColor: Colors.timline,
-        }
+        };
     }
-   
   };
 
-  const renderDetail = (rowData: TimelineInterface, sectionID: number, rowID: number) => {
+  const renderDetail = (
+    rowData: TimelineInterface,
+    sectionID: number,
+    rowID: number,
+  ) => {
     let title = <Text style={[styles.title]}>{rowData.title}</Text>;
     var desc = (
       <Text style={styles.textDescription}>{rowData.description}</Text>

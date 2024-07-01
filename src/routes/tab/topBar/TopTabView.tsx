@@ -1,5 +1,4 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Wallet from '../../../modules/wallet/Wallet';
 import TimelineComponent from '../../../common/components/TimelineComponent';
 import { todayTimelines, tomorrowTimelines, yesterdayTimelines } from '../../../mock/Timeline.mock';
 
