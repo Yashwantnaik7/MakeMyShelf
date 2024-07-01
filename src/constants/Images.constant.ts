@@ -8,6 +8,7 @@ const Images = {
     unSelectedGuide: require('../assets/images/guide_unselected.png'),
     selectedChart: require('../assets/images/chart_selected.png'),
     unSelectedChart: require('../assets/images/chart_unselected.png'),
+    back_button: require('../assets/images/back_button.png')
   },
   timeline: {
     location: require('../assets/images/location_icon.png'),
